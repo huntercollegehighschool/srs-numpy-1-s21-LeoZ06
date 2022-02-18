@@ -4,51 +4,88 @@ import numpy as np
 ##### DECLARING NUMPY ARRAYS #####
 
 # 2. Use np.array(<list>) to convert the list below into a numpy array. The array should be saved in a variable. Then print both the list and the array.
-a = [300, -200, 100, 0, -100, 200, -300]
+array_2 = [300, -200, 100, 0, -100, 200, -300]
+print(array_2)
+list_2 = np.array(array_2)
+print(list_2)
 
 ## The array method in numpy has an optional dtype argument which specifies the datatype each element should be. For the array above, it could be implemented using A = np.array(a, dtype=str) ##
 
 # 3. Declare new arrays with different datatypes using the list from #2. Datatypes to use: str, float, np.int32, np.int8, np.uint32, up.uint8.
-
+array_3a = np.array(array_2, dtype = str)
+print(array_3a)
+array_3b = np.array(array_2, dtype = float)
+print(array_3b)
+array_3c = np.array(array_2, dtype = np.int32)
+print(array_3c)
+array_3d = np.array(array_2, dtype = np.int8)
+print(array_3d)
+array_3e = np.array(array_2, dtype = np.uint32)
+print(array_3e)
+array_3f = np.array(array_2, dtype = np.uint8)
+print(array_3f)
 
 # 4. Use np.zeros(<int>) to create a array of zeroes of size 10. This should be saved in a variable. Then print the array.
-
+array_4 = np.zeros(10)
+print(array_4)
 
 # 5. In your array of zeroes, change the fifth 0 to a 6. (remember how indexing works in lists?) Print the array.
-
+array_4[4] = 6
+array_5 = array_4
+print(array_5)
 
 # 6. Use np.arange(<int>, <int>) to create an array with values ranging from 11 to 46. Print the array.
-
-
+array_6 = np.arange(11, 47)
+print(array_6)
 
 # 7. Reverse the array you created in #6. Print the array.
-
-
+array_7 = array_6[ : :-1]
+print(array_7)
 
 # 8. Use <array>.reshape(<int>, <int>) to turn your array from #6 into a multidimensional 6x6 array. Print the array.
-
-
+array_8 = array_6.reshape(6, 6)
+print(array_8)
 
 # 9. Use np.random.random((<int>, <int>)) to create a 10x10 array with random values. Print the array.
-
-
+array_9 = np.random.random((10, 10))
+print(array_9)
 
 # 10. Use np.random.randint(<int>, <int>, size=(<int>, <int>)) to create a 3x3 array with random integers. Print the array.
-
-
+array_10 = np.random.randint(1, 10, size = (3, 3))
+print(array_10)
 
 # 11. Use <array>.max() and <array>.min to identify the maximums and minimums of the arrays you created in #9 and #10. Print the results.
-
+array_9_max = array_9.max()
+print(array_9_max)
+array_9_min = array_9.min()
+print(array_9_min)
+array_10_max = array_10.max()
+print(array_10_max)
+array_10_min = array_10.min()
+print(array_10_min)
 
 # 12. Use <array>.mean() to find the means of the two arrays you created in #9 and #10. Print the results.
-
+array_9_mean = array_9.mean()
+print(array_9_mean)
+array_10_mean = array_10.mean()
+print(array_10_mean)
 
 # 13. Convert the following two lists into 2X3 arrays. (You will need to use np.array and .reshape)
-
 a = [2, 3, 5, 7, 11, 13]
 b = [3, 1, 4, 1, 5, 9]
+array_13_a = np.array(a)
+array_13_a = array_13_a.reshape(2, 3)
+print(array_13_a)
+array_13_b = np.array(b)
+array_13_b = array_13_b.reshape(2, 3)
+print(array_13_b)
 
 # 14. Add the two arrays from #13 (<array> + <array>)
-
+array_14 = array_13_a + array_13_b
+print(array_14)
 
 # 15. Multiply both arrays from #13 by 10.
+array_15_a = 10 * array_13_a
+print(array_15_a)
+array_15_b = 10 * array_13_b
+print(array_15_b)
